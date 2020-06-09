@@ -6,6 +6,7 @@
 </head>
 <body>
 <header>
+	<img src="/logo.png" alt="Doe Sangue">
 	<h1>Doe Sangue</h1>
 	<h2>Até 3 vidas com 1 doação</h2>
 	<h3>Mais de 38.000 doações são necessárias todos os dias</h3>
@@ -14,30 +15,22 @@
 </header>
 
 <main>
-	<form action="/">
-		<input type="text">
-		<input type="text">
-		<input type="text">
+	<form action="/" method="POST">
+		<input type="text" name="name" required>
+		<input type="email" name="email" required>
+		<input type="text" name="blood" required>
 		<input type="submit" value="Quero ajudar">
 	</form>
 	<h2>Últmos doadores</h2>
 	<section>
-		<div class="donats">
-			<div>AB+</div>
-			<p>Cleilton Timoteo</p>
-		</div>
-		<div class="donats">
-			<div>B+</div>
-			<p>Cleilton Timoteo</p>
-		</div>
-		<div class="donats">
-			<div>A+</div>
-			<p>Cleilton Timoteo</p>
-		</div>
-		<div class="donats">
-			<div>O+</div>
-			<p>Cleilton Timoteo</p>
-		</div>
+
+		{% for donor in donors %}
+			<div class="donats">
+				<div>{{ donor.blood }}</div>
+				<p>{{ donor.name }}</p>
+			</div>
+		{% endfor %}
+
 	</section>
 </main>
 </body>
