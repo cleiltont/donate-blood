@@ -1,0 +1,128 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	outline: none;
+}
+body{
+	background: #F5F5F5;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 50px 0 20px;
+}
+h1, h2, h3{
+	font-family: 'Ubuntu', sans-serif;
+}
+h1{
+	font-size: 40px;
+	font-weight: bolder;
+	margin-bottom: 30px;
+}
+h2{
+	font-size: 32px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-top: 60px;
+}
+h3{
+	font-size: 24;
+	color: #808080;
+	font-weight: 300;
+	line-height: 28px;
+}
+span{
+	color: #ff4f4f;
+	font-weight: bolder;
+}
+label{
+	margin: 10px 0 20px;
+	background: #ff4f4f;
+	color: #FFF;
+	border: 0px;
+	font: 500 16px Arial;
+	padding: 5px 10px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+#help:checked ~ form{
+	display: flex;
+}
+@keyframes aparece{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+header{
+	width: 100%;
+}
+form{
+	background: #ff4f4f;
+	display: none;
+	flex-direction: column;
+	padding: 10px 5px 20px 5px;
+	justify-content: center;
+	animation: aparece 1s ease;
+}
+.txt{
+	margin: 2px 0;
+    font-size: 16px;
+    border: 1px solid #ff9d9d;
+    background: none;
+    color: #FFF;
+    padding: 5px 10px;
+}
+.txt:focus{
+	background: #FFF;
+	color: #333;
+}
+::-webkit-input-placeholder{
+	color: #FFF;
+}
+#doar{
+	background: #FFF;
+	border: 0px;
+	line-height: 40px;
+	width: 100px;
+	margin: auto;
+	font-weight: 600;
+	margin-top: 10px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.donats{
+	background: #e0e0e0;
+	display: flex;
+	padding: 5px 10px 5px;
+	margin: 10px 5px;
+	flex-direction: column;
+	align-items: center;
+}
+section{
+	width: 100%;
+	display: grid;
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+.blood{
+	background: #ff4f4f;
+	width: 30px;
+	line-height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font: bold 16px 'Ubuntu';
+	border-radius: 3px;
+	color: #FFF;
+}
+p{
+	margin-top: 5px;
+	font: 300 15px 'Ubuntu';
+}
